@@ -122,7 +122,7 @@ def set_target(alias, target, type=None, descr=None, detail=None):
     if isinstance(target, list):
         targets = [str(x) for x in target]
     else:
-        targets = [int(target)]
+        targets = [str(target)]
 
     is_already_ok = True
     current_targets = get_target(alias)
