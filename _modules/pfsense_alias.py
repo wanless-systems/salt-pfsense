@@ -98,7 +98,7 @@ def has_target(alias, target):
     else:
         if target not in aliases[alias]['addresses']:
             global_presence = False
-            
+
     return global_presence
 
 
@@ -120,9 +120,9 @@ def set_target(alias, target, type=None, descr=None, detail=None):
 
     targets = []
     if isinstance(target, list):
-        targets = target
+        targets = [str(x) for x in target]
     else:
-        targets = [target]
+        targets = [int(target)]
 
     is_already_ok = True
     current_targets = get_target(alias)
